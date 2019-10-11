@@ -1,3 +1,9 @@
-# QSidePanel
+# Qt Side Panel widget
 
-TODO
+## Usage
+
+Add to your `*.pro` file next line: `include(<path/to>/QSidePanel/q_side_panel.pri)`
+
+## Examples
+
+See [MainWindow.cpp](./MainWindow.cpp)
