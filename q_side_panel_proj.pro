@@ -22,24 +22,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-contains(CONFIG, BOARD_QT_FIX) {
-    message("Platform: Board Mon700: Applied patch - changed GCC path (for Qt from repository)")
-
-    # ---------------------------------
-    QMAKE_CC         = /usr/bin/gcc-4.9
-    QMAKE_CXX        = /usr/bin/g++-4.9
-    QMAKE_LINK       = /usr/bin/g++-4.9
-    QMAKE_LINK_SHLIB = /usr/bin/g++-4.9
-
-   #QMAKE_AR         = /usr/bin/ar
-    QMAKE_OBJCOPY    = /usr/bin/objcopy
-    QMAKE_STRIP      = /usr/bin/strip
-    # ---------------------------------
-
-    # Path for libGAL (dependency for libGLESv2)
-    LIBS += -L/usr/lib/arm-linux-gnueabihf/vivante/x11 -lGAL
-}
-
 
 CONFIG += c++11
 
